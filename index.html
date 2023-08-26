@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color generator</title>
+</head>
+<body>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div {
+            background: #FF7B9C;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <div id="div-el"></div>
+    <script>
+        // let divEl = document.getElementById('div-el')
+        // let colorArray = ["#FFE1A8", "#00A676", "#E0D0C1", "#904C77", "#9CFFFA"]
+
+        // divEl.addEventListener('click', handleClick => {
+        //     let randomNumber = Math.floor(Math.random() * colorArray.length)
+        //     let rundomColor = colorArray[randomNumber]
+        //     divEl.style.background = rundomColor
+        // })
+
+        let divEl = document.getElementById('div-el')
+        //let color = "rgb(31 120 51)"
+
+        divEl.addEventListener('click', handleClick => {
+            let randomNumberOne = Math.floor(Math.random() * 300)
+            let randomNumberTwo = Math.floor(Math.random() * 300)
+            let randomNumberThree = Math.floor(Math.random() * 300)
+
+            let resultColor = `rgb(${randomNumberOne} ${randomNumberTwo} ${randomNumberThree})`
+            
+            divEl.style.background = resultColor
+        })
+
+    </script>
+</body>
+</html>
