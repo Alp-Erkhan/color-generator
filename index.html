@@ -12,28 +12,34 @@
             height: 100vw;
 
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
         div {
-            background: #FF7B9C;
+            background: rgb(255 123 156);
             width: 100px;
             height: 100px;
         }
     </style>
-    <div id="div-el"></div>
-    <script>
-        // let divEl = document.getElementById('div-el')
-        // let colorArray = ["#FFE1A8", "#00A676", "#E0D0C1", "#904C77", "#9CFFFA"]
 
-        // divEl.addEventListener('click', handleClick => {
-        //     let randomNumber = Math.floor(Math.random() * colorArray.length)
-        //     let rundomColor = colorArray[randomNumber]
-        //     divEl.style.background = rundomColor
-        // })
+    <div id="div-el"></div>
+    <h3 id="show-rgb">rgb(255 123 156)</h3>
+
+    <script>
+        /*
+            let divEl = document.getElementById('div-el')
+            let colorArray = ["#FFE1A8", "#00A676", "#E0D0C1", "#904C77", "#9CFFFA"]
+
+            divEl.addEventListener('click', handleClick => {
+                let randomNumber = Math.floor(Math.random() * colorArray.length)
+                let rundomColor = colorArray[randomNumber]
+                divEl.style.background = rundomColor
+            })
+        */
 
         let divEl = document.getElementById('div-el')
-        //let color = "rgb(31 120 51)"
+        let showRgb = document.getElementById('show-rgb')
 
         divEl.addEventListener('click', handleClick => {
             let randomNumberOne = Math.floor(Math.random() * 300)
@@ -43,6 +49,7 @@
             let resultColor = `rgb(${randomNumberOne} ${randomNumberTwo} ${randomNumberThree})`
             
             divEl.style.background = resultColor
+            showRgb.textContent = resultColor
         })
 
     </script>
